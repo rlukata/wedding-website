@@ -1,3 +1,3 @@
-exports.printMsg = function() {
-    console.log("Visit https://wedding.rampatra.com !");
+exports.printMsg = () => {
+	console.log("Visit https://wedding.rampatra.com !");
 };
