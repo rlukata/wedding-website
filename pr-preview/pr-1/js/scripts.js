@@ -325,15 +325,15 @@ async function initMap() {
 		zoom: 15,
 		center: location,
 		mapTypeId: google.maps.MapTypeId.SATELLITE,
-		// mapId: "DEMO_MAP_ID",
+		mapId: "DEMO_MAP_ID",
 	});
 
-	// TODO: Create MapID
-	// const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
-	// new AdvancedMarkerElement({
-	// 	position: location,
-	// 	map: map,
-	// });
+	// TODO: Create MapID for wedding site
+	const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
+	new AdvancedMarkerElement({
+		position: location,
+		map: map,
+	});
 }
 
 // alert_markup
