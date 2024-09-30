@@ -12,15 +12,14 @@ jobs:
     steps:
     - uses: actions/checkout@v4
 
-    - name: Node.js
-      uses: actions/setup-node@v4
+    - uses: oven-sh/setup-bun@v2
       with:
-        node-version: 20.x
+        bun-version: latest
 
     - name: Build
       if: github.event.action != 'closed' 
       run: |
-        npm install
+        bun install
         gulp
 
     - name: Deploy preview
