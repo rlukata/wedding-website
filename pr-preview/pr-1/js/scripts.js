@@ -324,7 +324,7 @@ async function initMap() {
 	const map = new google.maps.Map(document.getElementById("map-canvas"), {
 		zoom: 15,
 		center: location,
-		mapTypeId: google.maps.MapTypeId.SATELLITE,
+		mapTypeId: google.maps.MapTypeId.ROADMAP,
 		mapId: "DEMO_MAP_ID",
 	});
 
