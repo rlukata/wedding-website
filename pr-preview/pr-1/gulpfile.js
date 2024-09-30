@@ -1,6 +1,7 @@
 const gulp = require("gulp");
 const sass = require("gulp-sass")(require("sass"));
 const rename = require("gulp-rename");
+const replace = require("gulp-replace");
 const babel = require("gulp-babel");
 
 // compile scss to css
@@ -10,6 +11,13 @@ gulp.task("sass", () =>
 		.pipe(sass({ outputStyle: "compressed" }).on("error", sass.logError))
 		.pipe(rename({ basename: "styles.min" }))
 		.pipe(gulp.dest("./css")),
+);
+
+gulp.task("replace", () =>
+	gulp
+		.src("./js/scripts.js")
+		.pipe(replace("MAPS_API_KEY", process.env.MAPS_API_KEY))
+		.pipe(gulp.dest("./js")),
 );
 
 // watch changes in scss files and run sass task
@@ -26,4 +34,4 @@ gulp.task("minify-js", () => {
 });
 
 // default task
-gulp.task("default", gulp.series("sass", "minify-js"));
+gulp.task("default", gulp.series("sass", "replace", "minify-js"));
