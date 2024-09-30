@@ -319,18 +319,21 @@ function MD5(r) {
 /********************** Extras **********************/
 
 // Google map
-function initMap() {
+async function initMap() {
 	const location = { lat: 47.6704754, lng: -122.3200403 };
 	const map = new google.maps.Map(document.getElementById("map-canvas"), {
 		zoom: 15,
 		center: location,
-		scrollwheel: false,
+		mapTypeId: google.maps.MapTypeId.SATELLITE,
+		// mapId: "DEMO_MAP_ID",
 	});
 
-	new google.maps.Marker({
-		position: location,
-		map: map,
-	});
+	// TODO: Create MapID
+	// const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
+	// new AdvancedMarkerElement({
+	// 	position: location,
+	// 	map: map,
+	// });
 }
 
 // alert_markup
