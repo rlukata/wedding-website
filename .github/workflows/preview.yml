@@ -3,19 +3,8 @@ name: Preview/PR - Build website with NodeJS and Gulp
 on:
   pull_request:
     branches: [ "main" ]
-    # types:
-    #   - opened
-    #   - reopened
-    #   - synchronize
-    #   - closed
     
 concurrency: preview-${{ github.ref }}
-  
-permissions:
-  id-token: write # This is required for requesting the JWT
-  contents: write # This is required for actions/checkout
-  pull-requests: write
-  pages: write
 
 jobs:
   build:
