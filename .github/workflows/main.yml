@@ -4,8 +4,6 @@ on:
   push:
     branches: [ "main" ]
 
-concurrency: preview-${{ github.ref }}
-  
 permissions:
   id-token: write # This is required for requesting the JWT
   contents: write # This is required for actions/checkout
