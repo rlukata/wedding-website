@@ -24,6 +24,9 @@ jobs:
         npm install
         gulp
     
-    - name: Deploy to GitHub Pages
-      id: deployment
-      uses: actions/deploy-pages@v4
+    - uses: JamesIves/github-pages-deploy-action@v4
+      with:
+        folder: .
+        branch: main
+        clean-exclude: pr-preview
+        force: false
