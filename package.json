@@ -1,8 +1,5 @@
 {
   "name": "wedding-website",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "devDependencies": {
     "babel-preset-minify": "^0.5.2",
     "gulp": "^4.0.2",
