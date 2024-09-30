@@ -15,9 +15,9 @@ gulp.task("sass", () =>
 
 gulp.task("replace", () =>
 	gulp
-		.src("./js/scripts.js")
+		.src("./index.html")
 		.pipe(replace("MAPS_API_KEY", process.env.MAPS_API_KEY))
-		.pipe(gulp.dest("./js")),
+		.pipe(gulp.dest(".")),
 );
 
 // watch changes in scss files and run sass task
@@ -25,13 +25,13 @@ gulp.task("sass:watch", () => {
 	gulp.watch("./sass/**/*.scss", ["sass"]);
 });
 
-gulp.task("minify-js", () => {
-	return gulp
+gulp.task("minify-js", () =>
+	gulp
 		.src("./js/scripts.js")
 		.pipe(babel({ presets: ["minify"] }))
 		.pipe(rename({ basename: "scripts.min" }))
-		.pipe(gulp.dest("./js"));
-});
+		.pipe(gulp.dest("./js")),
+);
 
 // default task
 gulp.task("default", gulp.series("sass", "replace", "minify-js"));
