@@ -164,6 +164,9 @@ $(document).ready(() => {
 		});
 	});
 
+	/********************** Embed youtube video *********************/
+    $('.player').YTPlayer();
+
 	/********************** Toggle Map Content **********************/
 	$("#btn-show-map").click(() => {
 		$("#map-content").toggleClass("toggle-map-content");
