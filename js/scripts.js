@@ -346,7 +346,7 @@ function alert_markup(alert_type, msg) {
 
 /********************** Countdown **********************/
 // Set the wedding date
-const weddingDate = new Date("August 28, 2024 00:00:00").getTime();
+const weddingDate = new Date("August 28, 2025 04:00:00").getTime();
 
 // Function to update the countdown
 function updateCountdown() {
