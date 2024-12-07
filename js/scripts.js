@@ -343,35 +343,3 @@ async function initMap() {
 function alert_markup(alert_type, msg) {
 	return `<div class="alert alert-${alert_type}" role="alert">${msg}<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span>&times;</span></button></div>`;
 }
-
-/********************** Countdown **********************/
-// Set the wedding date
-const weddingDate = new Date("August 28, 2025 04:00:00").getTime();
-
-// Function to update the countdown
-function updateCountdown() {
-  const now = new Date().getTime();
-  const timeRemaining = weddingDate - now;
-
-  // Calculate days, hours, minutes, and seconds
-  const days = Math.floor(timeRemaining / (1000 * 60 * 60 * 24));
-  const hours = Math.floor((timeRemaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
-  const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
-
-  // Update the HTML elements
-  document.getElementById("days").textContent = days < 10 ? `0${days}` : days;
-  document.getElementById("hours").textContent = hours < 10 ? `0${hours}` : hours;
-  document.getElementById("minutes").textContent = minutes < 10 ? `0${minutes}` : minutes;
-  document.getElementById("seconds").textContent = seconds < 10 ? `0${seconds}` : seconds;
-
-  // Stop countdown when wedding day arrives
-  if (timeRemaining < 0) {
-    clearInterval(interval);
-    document.getElementById("countdown").innerHTML = "<h2>It's Our Wedding Day! 🎉</h2>";
-  }
-}
-
-// Update the countdown every second
-const interval = setInterval(updateCountdown, 1000);
-/********************** End Countdown **********************/
