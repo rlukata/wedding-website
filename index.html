@@ -335,20 +335,20 @@
                 <div id="map-content" class="pointer-events-auto">
                     <div class="row">
                         <div class="col-md-6">
-                            <h5>TODO</h5>
-                            <p>TODO</p>
+                            <h5>Wedding Venue Name</h5>
+                            <p>123 Main St. Seattle, WA</p>
                         </div>
                         <div class="col-md-6">
-                            <h5>TODO</h5>
+                            <h5>Contact Us!</h5>
                             <p><i class="fa fa-mobile"></i> <a href="tel://+919412345678">+1 2345678912</a><br>
                                 <i class="fa fa-mobile"></i> <a href="tel://+917123456789">+1 2345678912</a></p>
                         </div>
                     </div>
                     <div class="row text-center">
                         <div class="col-md-6" style="padding: 5px;">
-                            <!-- <a class="btn btn-fill btn-small"
-                               href="https://m.uber.com/ul/?action=setPickup&client_id=Yh7Dl6SjB56RY2JuuZF8ttVa6ryFV78W&pickup=my_location&dropoff[formatted_address]=Fortune%20Park%20Panchwati%20-%20Hotels%20in%20Kolkata%2C%20Howrah%2C%20West%20Bengal%2C%20India&dropoff[latitude]=22.593276&dropoff[longitude]=88.270277"><i
-                                    class="fa fa-taxi"></i>&nbsp;&nbsp;Book Uber</a> -->
+                            <a class="btn btn-fill btn-small"
+                               href="https://m.lyft.com/"><i
+                                    class="fa fa-taxi"></i>&nbsp;&nbsp;Book a Lyft</a>
                         </div>
                         <div class="col-md-6" style="padding: 5px;">
                             <a class="btn btn-accent btn-small" id="btn-show-map"><i class="fa fa-map-marker"></i>&nbsp;&nbsp;Show
@@ -397,27 +397,42 @@
                         </div>
                         <div class="col-md-6 col-sm-6">
                             <div class="form-input-group">
-                                <i class="fa fa-user"></i><input name="name" class=""
-                                                                 placeholder="Your name"
-                                                                 required>
+                                <i class="fa fa-key"></i><input type="number" name="invite_code" id="invite_code"
+                                                                class="" min="0"
+                                                                placeholder="Invite code"
+                                                                required>
                             </div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-md-6 col-sm-6">
                             <div class="form-input-group">
-                                <i class="fa fa-users"></i><input type="number" name="extras" class="" min="0"
-                                                                  max="4"
-                                                                  placeholder="Husband/Wife or kids"
-                                                                  required>
+                                <i class="fa fa-user"></i><input name="name" class=""
+                                                                 placeholder="Your name"
+                                                                 required>
                             </div>
                         </div>
                         <div class="col-md-6 col-sm-6">
                             <div class="form-input-group">
-                                <i class="fa fa-key"></i><input type="number" name="invite_code" id="invite_code"
-                                                                class="" min="0"
-                                                                placeholder="Invite code"
-                                                                required>
+                                <i class="fa fa-cutlery"></i><input name="food" class=""
+                                                                  placeholder="Your food selection"
+                                                                  required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6">
+                            <div class="form-input-group">
+                                <i class="fa fa-user"></i><input name="guest" class=""
+                                                                  placeholder="Name of guest"
+                                                                  >
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6">
+                            <div class="form-input-group">
+                                <i class="fa fa-cutlery"></i><input name="guestfood" class=""
+                                                                  placeholder="Guest food selection"
+                                                                  >
                             </div>
                         </div>
                     </div>

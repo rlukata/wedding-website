@@ -221,7 +221,7 @@ $(document).ready(() => {
 			),
 		);
 
-		if (MD5($("#invite_code").val()) !== "3b79ecc7e17456f7524eb7f17709dc8b") {
+		if (MD5($("#invite_code").val()) !== "0aface3e62ae854e0fd40b1124ec1e85") {
 			$("#alert-wrapper").html(
 				alert_markup(
 					"danger",
