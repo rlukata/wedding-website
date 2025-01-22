@@ -104,6 +104,31 @@ section .header {
   background-color: #000;
   border-radius: 4px;
 }
+.collapsible {
+  background-color: $accent-color;
+  color: white;
+  cursor: pointer;
+  padding: 18px 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+
+  border-radius: 3px;
+}
+
+.active, .collapsible:hover {
+  background-color: $accent-color-hover;
+}
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: transparent;
+}
+
 /* ==========================================================================
 Animations
 ========================================================================== */
@@ -560,6 +585,25 @@ Features-stack
     padding-left: 100px;
   }
 
+  .time {
+    font-size: 13px;
+    font-style: italic;
+    text-transform: lowercase;
+    color: $txt-primary;
+  }
+}
+
+/* ==========================================================================
+.seattle
+========================================================================== */
+.seattle {
+  .leftcol {
+    padding-right: 100px;
+    border-right: solid 1px $keyline-color;
+  }
+  .rightcol {
+    padding-left: 100px;
+  }
   .time {
     font-size: 13px;
     font-style: italic;
