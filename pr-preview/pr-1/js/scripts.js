@@ -323,7 +323,7 @@ function MD5(r) {
 
 // Google map
 async function initMap() {
-	const location = { lat: 47.6704754, lng: -122.3200403 };
+	const location = { lat: 47.6518, lng: -122.3553 };
 	const map = new google.maps.Map(document.getElementById("map-canvas"), {
 		zoom: 15,
 		center: location,

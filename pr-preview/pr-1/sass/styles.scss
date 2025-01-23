@@ -104,6 +104,65 @@ section .header {
   background-color: #000;
   border-radius: 4px;
 }
+
+.collapsible-container {
+  max-width: 800px;  /* Limit maximum width */
+  margin: 0 auto;    /* Center the container */
+  padding: 20px;
+}
+
+.collapsible {
+  background-color: #fff;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 16px;
+  transition: 0.4s;
+  margin: 10px 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  position: relative;
+}
+
+.active, .collapsible:hover {
+  background-color: #f8f8f8;
+}
+
+.collapsible:after {
+  content: '\002B';
+  color: #777;
+  font-weight: bold;
+  float: right;
+  margin-left: 5px;
+  transition: 0.4s;
+}
+
+.active:after {
+  content: "\2212";
+  transform: rotate(180deg);
+}
+
+.content {
+  padding: 0 18px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+  background-color: white;
+  border-radius: 0 0 8px 8px;
+  margin-bottom: 15px;
+  width: 100%;  /* Make content full width of container */
+}
+
+.active + .content {
+  max-height: 500px;
+  padding: 18px;
+  border: 1px solid #eee;
+}
+
 /* ==========================================================================
 Animations
 ========================================================================== */
@@ -569,6 +628,25 @@ Features-stack
 }
 
 /* ==========================================================================
+.seattle
+========================================================================== */
+.seattle {
+  .leftcol {
+    padding-right: 100px;
+    border-right: solid 1px $keyline-color;
+  }
+  .rightcol {
+    padding-left: 100px;
+  }
+  .time {
+    font-size: 13px;
+    font-style: italic;
+    text-transform: lowercase;
+    color: $txt-primary;
+  }
+}
+
+/* ==========================================================================
 .blog
 ========================================================================== */
 .blog {
@@ -858,14 +936,14 @@ Footer
 ========================================================================== */
 footer {
   .content {
-    border-top: 1px solid $keyline-color;
-    padding-bottom: 20px;
+    border-top: 0px solid $keyline-color;
+    padding-bottom: 150px;
   }
   .to-top-wrapper {
     font-size: 30px;
     display: block;
     cursor: pointer;
-    margin: -25px auto 50px;
+    margin: 0px auto 50px;
     border-radius: 50%;
     width: 50px;
     height: 50px;
