@@ -464,15 +464,17 @@
             <div class="col-md-12 text-center">
                 <h3 class="header">More Info</h3>
             </div>
-            <div class="col-md-2">
+        </div>
+        <div class="row">
+            <div class="collapsible-container">
                 <button type="button" class="collapsible">Places to stay in Seattle</button>
-                <div class="content col-md-6 col-md-offset-3">
+                <div class="content">
                     <p><strong>Places to stay</strong></p>
                     <h5>TODO</h5>
                     <p>TODO</p>
                 </div>
                 <button type="button" class="collapsible">Our favorite restaurants</button>
-                <div class="content col-md-6 col-md-offset-3">
+                <div class="content">
                     <p><strong>Our favorite restaurants</strong></p>
                     <p>Link to Google List: <a href="https://maps.app.goo.gl/5XJ6LgiW6GHFxUiSA">Rami & Merrilee's Favorites</a></p>
                     <h5>Georgetown</h5>
@@ -488,17 +490,17 @@
                     <!--TODO: d'la santa, el legendario, dreamland, deadline, fat's chicken & waffles,  -->
                 </div>
                 <button type="button" class="collapsible">Things to do in Seattle</button>
-                <div class="content col-md-6 col-md-offset-3">
+                <div class="content">
                     <p>figure it outttt</p>
                 </div>
                 <button type="button" class="collapsible">Gifts?</button>
-                <div class="content col-md-6 col-md-offset-3">
-                  <p>
-                      Please no gifts! We have everything we could possibly need and we know travel
-                      can be expensive. If you must contribute, please donate to one of the following
-                      fundraisers:
-                  </p>
-                  <p>TODO</p>
+                <div class="content">
+                    <p>
+                        Please no gifts! We have everything we could possibly need and we know travel
+                        can be expensive. If you must contribute, please donate to one of the following
+                        fundraisers:
+                    </p>
+                    <p>TODO</p>
                 </div>
             </div>
         </div>
@@ -531,15 +533,27 @@ var coll = document.getElementsByClassName("collapsible");
 var i;
 
 for (i = 0; i < coll.length; i++) {
-  coll[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var content = this.nextElementSibling;
-    if (content.style.display === "block") {
-      content.style.display = "none";
-    } else {
-      content.style.display = "block";
-    }
-  });
+    coll[i].addEventListener("click", function() {
+        // Close all other panels
+        var allContent = document.getElementsByClassName("content");
+        var allCollapsible = document.getElementsByClassName("collapsible");
+        
+        for(var j = 0; j < allCollapsible.length; j++) {
+            if(allCollapsible[j] !== this) {
+                allCollapsible[j].classList.remove("active");
+                allContent[j].style.maxHeight = null;
+            }
+        }
+        
+        // Toggle current panel
+        this.classList.toggle("active");
+        var content = this.nextElementSibling;
+        if (content.style.maxHeight) {
+            content.style.maxHeight = null;
+        } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+        }
+    });
 }
 </script>
 
