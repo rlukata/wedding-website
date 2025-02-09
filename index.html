@@ -123,7 +123,7 @@
         </div>
         <div class="countdown-container text-center">
             <script src="https://cdn.logwork.com/widget/countdown.js"></script>
-            <a href="https://logwork.com/countdown-timer" onclick="return false" class="countdown-timer" data-style="columns" data-timezone="America/Los_Angeles" data-date="2025-08-28 16:00"><h3>Countdown to Our Wedding</h3></a>
+            <a href="https://logwork.com/countdown-timer" onclick="return false" class="countdown-timer" data-style="columns" data-timezone="America/Los_Angeles" data-date="2025-08-28 18:00"><h3>Countdown to Our Wedding</h3></a>
         </div>
     </div>
 </section>
@@ -168,9 +168,8 @@
             <div class="col-md-6 col-sm-12 col-xs-12 leftcol">
                 <div class="wp3">
                     <p><strong>Ceremony</strong></p>
-
-                    <h5>Stay tuned for updates! <span class="time">TBD</span></h5>
-                    <p>TODO</p>
+                    <h5>Stay tuned for updates! <span class="time"></span></h5>
+                    <p></p>
                 </div>
 <!--                <div class="wp5">-->
 <!--                    <h5>Ceremony <span class="time">4PM - 12AM</span></h5>-->
@@ -180,8 +179,10 @@
             <div class="col-md-6 col-sm-12 col-xs-12 rightcol">
                 <div class="wp4">
                     <p><strong>Reception</strong></p>
-                    <h5>Check back later! <span class="time">TBD</span></h5>
-                    <p>TODO</p>
+                    <h5>Check back later! <span class="time">
+<!--                        TBD-->
+                    </span></h5>
+                    <p></p>
                 </div>
 <!--                <div class="wp6">-->
 <!--                    <h5>After Party <span class="time">TBD</span></h5>-->
@@ -208,12 +209,12 @@
                 <div class="modal-body">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span>&times;</span>
                     </button>
-                    <h3 class="text-center section-padding">Ugh... dress codes?</h3>
-                    <h5>Ceremony & Reception <span class="time">TBD</span></h5>
+                    <h3 class="text-center section-padding">What to wear?</h3>
+<!--                    <h5>Ceremony & Reception <span class="time">TBD</span></h5>-->
                     <p>
-                        <strong>Formal Attire</strong>
+                        Semi-formal or formal.
                         <br>
-                        TODO... Theme? Colors?
+                        Please avoid casual wear like jeans or sneakers.
                     </p>
                 </div>
             </div><!-- /.modal-content -->
@@ -234,6 +235,10 @@
         <div class="row section-border wp7">
             <div class="col-md-4 col-md-offset-4">
                 <img src="img/middle_section_both.jpg">
+<!--                <video width="400" controls autoplay loop muted>-->
+<!--                  <source src="img/eng_pics/tbd.MOV" type="video/mp4">-->
+<!--                  Your browser does not support HTML video.-->
+<!--                </video>-->
             </div>
         </div>
     </div>
@@ -337,8 +342,10 @@
 <section id="map" class="section-padding">
     <div class="text-center">
         <h3>How do I get there?</h3>
-        <p>TODO </p>
-        <p>Parking: Street parking. TODO...</p>
+        <p>The wedding venue is in the Fremont neighborhood, typically a 15-minute drive <br>
+            from downtown. However, be sure to allow extra time for Thursday evening traffic.<br>
+            If you plan on driving, there is street parking available. We recommend using a <br>
+            rideshare app like Lyft, especially if you plan on drinking! </p>
     </div>
     <div id="map-canvas"></div>
     <div id="map-content-wrapper" class="container pointer-events-none">
@@ -352,13 +359,18 @@
                 <div id="map-content" class="pointer-events-auto">
                     <div class="row">
                         <div class="col-md-6">
-                            <h5>Wedding Venue Name</h5>
-                            <p>123 Main St. Seattle, WA</p>
+                            <h5>The Fremont Foundry</h5>
+                            <a href="https://maps.app.goo.gl/sGhG27wEnM464X7K6">
+                            <p>154 N 35th St. <br>
+                                Seattle, WA 98103</p>
+                            </a>
                         </div>
                         <div class="col-md-6">
                             <h5>Contact Us!</h5>
-                            <p><i class="fa fa-mobile"></i> <a href="tel://+919412345678">+1 2345678912</a><br>
-                                <i class="fa fa-mobile"></i> <a href="tel://+917123456789">+1 2345678912</a></p>
+                            <p>
+                                <i class="fa fa-mobile"></i> Merrilee <a href="tel://+15176174141">+1 5176174141</a><br>
+                                <i class="fa fa-mobile"></i> Rami <a href="tel://+12062917416">+1 2062917416</a>
+                            </p>
                         </div>
                     </div>
                     <div class="row text-center">
@@ -429,7 +441,7 @@
                         <div class="col-md-6 col-sm-6">
                             <div class="form-input-group">
                                 <i class="fa fa-cutlery"></i>
-                                <input name="food" class="" placeholder="Your food selection" required>
+                                <input name="food" class="" placeholder="Your Dietary Restrictions" required>
                             </div>
                         </div>
                     </div>
@@ -443,7 +455,7 @@
                         <div class="col-md-6 col-sm-6">
                             <div class="form-input-group">
                                 <i class="fa fa-cutlery"></i>
-                                <input name="guest_food" class="" placeholder="Guest food selection">
+                                <input name="guest_food" class="" placeholder="Guest Dietary Restrictions">
                             </div>
                         </div>
                     </div>
@@ -467,40 +479,92 @@
         </div>
         <div class="row">
             <div class="collapsible-container">
-                <button type="button" class="collapsible">Places to stay in Seattle</button>
+                <button type="button" class="collapsible">Where to stay in Seattle</button>
                 <div class="content">
-                    <p><strong>Places to stay</strong></p>
-                    <h5>TODO</h5>
-                    <p>TODO</p>
+                    <h4>We recommend a hotel or short-term rental in one of the following neighborhoods...</h4>
+                    <br>
+                    <div class="neighborhood">
+                        <h5>Downtown Seattle – Best for First-Time Visitors & Sightseeing</h5>
+                        <ul style="padding-left:20px">
+                            <li>Close to top attractions like Pike Place Market, the Space Needle, and the waterfront.</li>
+                            <li>Easy access to public transportation.</li>
+                            <li>Plenty of hotel options from luxury to budget-friendly.</li>
+                        </ul>
+                        <p class="downsides"><strong>Potential Downsides:</strong> Can be pricier and more touristy.</p>
+                    </div>
+
+                    <div class="neighborhood">
+                        <h5>Belltown – Best for Nightlife & Dining</h5>
+                        <ul style="padding-left:20px">
+                            <li>Trendy bars, coffee shops, and restaurants.</li>
+                            <li>Walkable to downtown and the waterfront.</li>
+                        </ul>
+                        <p class="downsides"><strong>Potential Downsides:</strong> Can get noisy, especially on weekends.</p>
+                    </div>
+
+                    <div class="neighborhood">
+                        <h5>Capitol Hill – Best for a Lively, Artsy Vibe & LGBTQ+ Friendly Scene</h5>
+                        <ul style="padding-left:20px">
+                            <li>Seattle’s nightlife hub with fantastic bars and music venues.</li>
+                            <li>Great food scene, from casual to high-end dining.</li>
+                            <li>Beautiful parks and a creative atmosphere.</li>
+                        </ul>
+                        <p class="downsides"><strong>Potential Downsides:</strong> Not as close to major tourist attractions.</p>
+                    </div>
+
+                    <div class="neighborhood">
+                        <h5>Queen Anne (Lower Queen Anne) – Best for a Quiet Yet Central Location</h5>
+                        <ul style="padding-left:20px">
+                            <li>Near the Space Needle and Museum of Pop Culture.</li>
+                            <li>More residential, with charming streets and great views.</li>
+                        </ul>
+                        <p class="downsides"><strong>Potential Downsides:</strong> Hilly terrain can be challenging.</p>
+                    </div>
+
+                    <div class="neighborhood">
+                        <h5>Fremont – Best for a Quirky, Laid-Back Stay</h5>
+                        <ul style="padding-left:20px">
+                            <li>Fun, artsy vibe with boutiques and breweries.</li>
+                            <li>Home to the famous Fremont Troll.</li>
+                        </ul>
+                        <p class="downsides"><strong>Potential Downsides:</strong> A bit farther from downtown (10-15 min drive).</p>
+                    </div>
+
+                    <div class="neighborhood">
+                        <h5>Ballard – Best for a More Local, Hip Experience</h5>
+                        <ul style="padding-left:20px">
+                            <li>Great food, coffee shops, and craft breweries.</li>
+                            <li>Home to Ballard Locks and Golden Gardens Beach.</li>
+                        </ul>
+                        <p class="downsides"><strong>Potential Downsides:</strong> Further from downtown (15-20 min drive).</p>
+                    </div>
+
+                    <h5>Best Choice Based on Your Needs:</h5>
+                    <ul style="padding-left:20px">
+                        <li><strong>First-time visitors:</strong> Downtown or Belltown.</li>
+                        <li><strong>Nightlife & foodies:</strong> Capitol Hill or Belltown.</li>
+                        <li><strong>More relaxed stay:</strong> Queen Anne, Fremont, or Ballard.</li>
+                    </ul>
                 </div>
-                <button type="button" class="collapsible">Our favorite restaurants</button>
+                <button type="button" class="collapsible">What to eat and do in Seattle</button>
                 <div class="content">
-                    <p><strong>Our favorite restaurants</strong></p>
-                    <p>Link to Google List: <a href="https://maps.app.goo.gl/5XJ6LgiW6GHFxUiSA">Rami & Merrilee's Favorites</a></p>
-                    <h5>Georgetown</h5>
-                    <p><a href="https://maps.app.goo.gl/66XQTo5GAj9SkHFn7">Ciudad</a></p>
-                    <h5>University District</h5>
-                    <p><a href="https://maps.app.goo.gl/J656Af4M27jUtVUm6">Sweet Alchemy Ice Creamery</a></p>
-                    <h5>Fremont</h5>
-                    <p><a href="https://maps.app.goo.gl/9VhAVZznhfY1cnMU9">Dreamland Bar & Diner</a></p>
-                    <h5>Belltown</h5>
-                    <p><a href="https://maps.app.goo.gl/BbbFeRDLZcdtb23i9">Some Random Bar</a></p>
-                    <h5>Capital Hill</h5>
-                    <p><a href="https://maps.app.goo.gl/E4yTAqZKAYCWKuxt6">Life On Mars</a></p>
-                    <!--TODO: d'la santa, el legendario, dreamland, deadline, fat's chicken & waffles,  -->
-                </div>
-                <button type="button" class="collapsible">Things to do in Seattle</button>
-                <div class="content">
-                    <p>figure it outttt</p>
+                    <br>
+                    <p><strong>Visit our Google list: </strong>
+                    <a href="https://maps.app.goo.gl/5XJ6LgiW6GHFxUiSA">Rami & Merrilee's Favorites</a></p>
                 </div>
                 <button type="button" class="collapsible">Gifts?</button>
                 <div class="content">
                     <p>
-                        Please no gifts! We have everything we could possibly need and we know travel
+                        Please no gifts! We have everything we could possibly need, and we know travel
                         can be expensive. If you must contribute, please donate to one of the following
                         fundraisers:
+                            <ul style="padding-left:20px">
+                            <li><a href="https://donate.unrwa.org/int/en/gaza">United Nations Relief and Works Agency</a></li>
+                            <li><a href="https://www.pcrf.net/">Palestine Children's Relief Fund</a></li>
+                            <li><a href="https://wck.org/">World Central Kitchen</a></li>
+                            <li><a href="https://www.msf.org/donate">Médecins Sans Frontières</a></li>
+                        </ul>
                     </p>
-                    <p>TODO</p>
                 </div>
             </div>
         </div>
