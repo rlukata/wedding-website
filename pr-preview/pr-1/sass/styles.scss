@@ -102,18 +102,6 @@ section .header {
   border-radius: 4px;
 }
 
-@media (min-width: 992px) {
-    .col-md-offset-3 {
-        margin-left: 25%;
-    }
-}
-
-@media (min-width: 992px) {
-    .col-md-offset-3 {
-        margin-left: 25%;
-    }
-}
-
 .collapsible-container {
   max-width: 800px;  /* Limit maximum width */
   margin: 0 auto;    /* Center the container */
@@ -432,7 +420,6 @@ header {
   color: #fff;
   font-size: 30px;
   position: absolute;
-  bottom: 30px;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -872,7 +859,7 @@ Google map
 RSVP form
 ========================================================================== */
 .rsvp {
-  padding-bottom: 140px;
+  padding-bottom: 40px;
   .rsvp-form {
     .rsvp-btn {
       padding: 15px 0;
@@ -949,7 +936,7 @@ footer {
     font-size: 30px;
     display: block;
     cursor: pointer;
-    margin: 0px auto 50px;
+    margin: 0px auto 25px;
     border-radius: 50%;
     width: 50px;
     height: 50px;
