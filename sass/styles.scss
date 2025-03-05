@@ -50,9 +50,6 @@ ul, ol {
   margin: 0;
   padding: 0;
 }
-ul li {
-  //list-style: none;
-}
 section .header {
   padding-bottom: 30px;
 }
@@ -139,11 +136,6 @@ section .header {
   float: right;
   margin-left: 5px;
   transition: 0.4s;
-}
-
-.active:after {
-  content: "\2212";
-  transform: rotate(180deg);
 }
 
 .content {
@@ -242,6 +234,7 @@ Navigation
   transition: opacity 0.5s;
 }
 .nav-toggle {
+  background-color: unset;
   position: absolute;
   top: 0;
   right: 15px;
@@ -318,11 +311,12 @@ Hero
   background-size: cover;
   position: relative;
 
-  /*.rsvp-btn {
-    position: absolute;
-    bottom: 100px;
-    left: 50%;
-  }*/
+  .rsvp-btn {
+    color: #ca92fe;
+    // position: absolute;
+    // bottom: 100px;
+    // left: 50%;
+  }
   .down-arrow a {
     color: $txt-light;
   }

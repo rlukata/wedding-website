@@ -22,42 +22,15 @@
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
     <link rel="manifest" href="manifest.json">
     <link rel="mask-icon" href="img/safari-pinned-tab.svg" color="#5bbad5">
-
-    <script>
-        // load css files from CDN if local node_modules fail
-        function loadCssFromCDN(css) {
-            // create new link tag
-            const link = document.createElement('link');
-            if (css === 'animate.css') {
-                link.href = 'https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css';
-            } else if (css === 'font-awesome.css') {
-                link.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css';
-            }
-            link.rel = 'stylesheet';
-
-            // add link tag to head section
-            document.getElementsByTagName('head')[0].appendChild(link);
-        }
-
-        // load js files from CDN if local node_modules fail
-        function loadJsFromCDN(js) {
-            if (js === 'waypoints.js') {
-                document.write('<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"><\/script>');
-            } else if (js === 'jquery.js') {
-                document.write('<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"><\/script>');
-            }
-        }
-    </script>
-
-    <link rel="stylesheet" href="css/normalize.min.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/jquery.fancybox.css">
-    <link rel="stylesheet" href="css/flexslider.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.7.2/flexslider.min.css">
     <link rel="stylesheet" href="css/styles.min.css">
     <link rel="stylesheet" href="css/queries.css">
-    <link rel="stylesheet" href="node_modules/animate.css/animate.min.css" onerror="loadCssFromCDN('animate.css')">
-    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css" onerror="loadCssFromCDN('font-awesome.css')">
-    <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script> <!-- Do not modify or touch -->
 </head>
 <body id="top">
 <!--[if lt IE 8]>
@@ -95,10 +68,7 @@
         <div class="row">
             <div class="col-md-10 col-md-offset-1">
                 <div class="hero-content text-center">
-                    <!--<h1>Ram and Antara</h1>-->
                     <img src="img/logo-lg.png">
-                    <!--<p class="intro">Ram & Antara are getting hitched!</p>-->
-                    <!--<a href="#" class="btn btn-fill btn-large btn-margin-right">Scroll Down</a> -->
                 </div>
             </div>
         </div>
@@ -137,18 +107,13 @@
         </div>
         <div class="row">
             <div class="col-md-3 hidden-sm hidden-xs"><img src="img/eng_pics/2023_oct_barcelona_merr_rose_how_we_met.jpg" class="wp1"></div>
-            <div class="col-md-6">
-                <p>We like to say our story started with friendship—no grand setups, just two people who kept finding themselves in the same orbit. Back then, we had mutual friends (who definitely claim they planned it all, but we’ll let them have their moment). What began as group hangouts—coffee runs, movie nights, the occasional “why are we still awake?” debates—turned into something quieter. We’d text just the two of us, trade playlists, and lose track of time talking about everything and nothing. It wasn’t love at first sight; it was “Oh, you’re actually… cool” after months of slowly peeling back layers.</p>
-                <p>Let’s just say our “flirting era” was… a mess. One of us lobbed a poorly disguised compliment; the other volleyed back a joke to dodge the sincerity. We became experts at the almost—almost holding hands during a movie, almost confessing feelings after one too many laughs, almost admitting we’d memorized each other’s coffee orders. For every bold text sent, there was a panicked backtrack. For every lingering glance, a perfectly timed distraction. We were a masterclass in mixed signals, oscillating between “Are we doing this?” and “Wait, are we doing this?”</p>
-                <p>Our friends called it “painfully obvious.” We called it survival mode. Every time one of us inched forward, the other would freeze—not out of doubt, but this weird, unspoken fear of ruining what we already had. It was equal parts thrilling and ridiculous, like a rom-com where the leads take 90 minutes to figure out they’re perfect for each other.</p>
-                <p>Then, finally, we hit a tipping point. Maybe it was the night we talked until sunrise and ran out of excuses to avoid the truth. Maybe it was realizing that the friendship we were so scared to lose was already something irreplaceable. Whatever it was, we stopped overcomplicating it. No fireworks, no grand speech—just a quiet “Okay, let’s try this” that felt like coming home.</p>
-                <p>Looking back, we’re glad it unfolded exactly how it did. Those months of chaos taught us to laugh at our own awkwardness, to trust the slow build, and to never let the other forget who stressed out whom more. (Spoiler: It was mutual.)</p>
+            <div class="col-md-6" style="font-weight: bold;">
+                <p>Our story started with friendship—no grand setups, just two people who kept finding themselves in the same orbit. What began as group hangouts—Costco runs, movie nights, the occasional “why are we still awake?” debates—turned into something quieter. We’d text just the two of us, trade playlists, and lose track of time talking about everything and nothing. It wasn’t love at first sight; it was “Oh, you’re actually… cool” after months of slowly peeling back layers.</p>
+                <p>Let’s just say our “flirting era” was… a mess. One of us lobbed a poorly disguised compliment; the other volleyed back a joke to dodge the sincerity. We became experts at the almost—almost holding hands during a movie, almost confessing feelings after one too many laughs, almost admitting we’d memorized each other’s favorite meals. For every bold text sent, there was a panicked backtrack. For every lingering glance, a perfectly timed distraction. We were a masterclass in mixed signals, oscillating between “Are we doing this?” and “Wait, are we doing this?”</p>
+                <p>Every time one of us inched forward, the other would freeze—not out of doubt, but this weird, unspoken fear of ruining what we already had. It was equal parts thrilling and ridiculous, like a rom-com where the leads take 90 minutes to figure out they’re perfect for each other. Then, finally, we hit a tipping point. Maybe it was the night we talked until sunrise and ran out of excuses to avoid the truth. Maybe it was realizing that the friendship we were so scared to lose was already something irreplaceable. Whatever it was, we stopped overcomplicating it. No fireworks, no grand speech—just a quiet “Okay, let’s try this” that felt like coming home.</p>
+                <p>And the rest is history...</p>
             </div>
             <div class="col-md-3 hidden-sm hidden-xs"><img src="img/eng_pics/2023_nov_seattle_rami_how_we_met.png" class="wp2"></div>
-        </div>
-        <div class="row">
-            <div class="col-sm-4 col-sm-push-2 col-xs-6 hidden-md hidden-lg"><img src="img/eng_pics/2023_oct_barcelona_merr_rose_how_we_met.jpg" class="wp8"></div>
-            <div class="col-sm-4 col-sm-push-2 col-xs-6 hidden-md hidden-lg"><img src="img/eng_pics/2023_nov_seattle_rami_how_we_met.png" class="wp9"></div>
         </div>
     </div>
 </section>
@@ -224,7 +189,6 @@
         <div class="row">
             <div class="col-md-12 text-center">
                 <h3>Pictures are worth a thousand words, but we're having a pro take them.</h3>
-                <p>TODO: DON'T TAKE PHOTOS DURING THE WEDDING
                 </p>
             </div>
         </div>
@@ -578,12 +542,12 @@
         </div>
     </div>
 </footer>
-<script src="js/vendor/jquery-1.11.2.min.js" onerror="loadJsFromCDN('jquery.js')"></script>
-<script src="node_modules/waypoints/lib/jquery.waypoints.min.js" onerror="loadJsFromCDN('waypoints.js')"></script>
-<script src="js/jquery.fancybox.pack.js"></script>
-<script src="js/vendor/bootstrap.min.js"></script>
-<script src="js/jquery.flexslider-min.js"></script>
-<script src="js/jquery.mb.YTPlayer.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.pack.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/4.6.2/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flexslider/2.7.2/jquery.flexslider.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mb.YTPlayer/3.3.9/jquery.mb.YTPlayer.min.js"></script>
 <script src="js/vendor/ouical.js"></script>
 <script src="js/scripts.min.js"></script>
 <script async defer
@@ -616,6 +580,10 @@ for (i = 0; i < coll.length; i++) {
     });
 }
 </script>
-
+<script>
+$(document).ready(function(){
+    $(this).scrollTop(0);
+});
+</script>
 </body>
 </html>
