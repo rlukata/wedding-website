@@ -11,12 +11,6 @@
 
 }
 
-@media screen and (max-width: 1024px) {
-    .hero .hero-content {
-        padding-top: 50%;
-    }
-}
-
 /* Responsive nav kicks in */
 @media screen and (max-width: 991px) {
     header {
@@ -25,7 +19,7 @@
     }
 
     .hero .hero-content {
-        padding-top: 50%;
+        padding-top: 70%;
     }
 
     .col-md-6 {
@@ -252,7 +246,7 @@
     }
 
     .rsvp {
-        padding-top: 40px;
+        padding-top: 140px;
     }
 
     footer .social-share {
@@ -391,5 +385,20 @@
     .col-md-6 {
         flex: unset;
         max-width: unset;
+    }
+}
+
+@media (min-width: 768px) {
+    .col-md-4 {
+        -ms-flex: unset;
+        flex: unset;
+        max-width: unset;
+        flex-wrap: unset;
+    }
+}
+
+@media (max-width: 768px) {
+    .rsvp {
+        padding-top: 40px;
     }
 }
