@@ -396,6 +396,8 @@ header {
       a {
         color: $txt-light;
         padding-right: 25px;
+        font-size: 15px;
+        font-weight: bold;        
 
         &:hover {
           color: $accent-color;

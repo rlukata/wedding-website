@@ -5,17 +5,15 @@ body.dark-mode {
 }
 
 /* Navigation */
+.dark-mode .fixed {
+  background-color: rgba(18, 18, 18, 0.9);
+}
+
 .dark-mode .primary-nav li a, 
 .dark-mode .member-actions li a {
     color: #e0e0e0;
 }
 
-.dark-mode .member-actions li a.btn-white {
-    color: #121212;
-    background-color: #e0e0e0;
-}
-
-.dark-mode .nav-toggle span, 
 .dark-mode .nav-toggle span:before, 
 .dark-mode .nav-toggle span:after {
     background-color: #e0e0e0;
@@ -31,14 +29,6 @@ body.dark-mode {
 }
 
 /* General sections */
-.dark-mode .countdown-container {
-    color: white;
-}
-
-.dark-mode .section-padding {
-    background-color: #121212;
-}
-
 .dark-mode h3, 
 .dark-mode h5, 
 .dark-mode .header {
@@ -244,10 +234,6 @@ body.dark-mode p {
 }
 
 body.dark-mode .collapsible p {
-    background-color: #444;
-}
-
-body.dark-mode .modal-body p {
     background-color: #444;
 }
 
