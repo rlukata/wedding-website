@@ -12,6 +12,13 @@
 /* ==========================================================================
 Global Styles
 ========================================================================== */
+.row {
+  margin-right: unset;
+  margin-left: unset;
+}
+.rsvp-btn {
+  max-width: 200px !important;
+}
 .group:after {
   content: "";
   display: table;
