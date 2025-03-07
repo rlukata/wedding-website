@@ -31,6 +31,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script> <!-- Do not modify or touch -->
+    <link rel="stylesheet" href="css/dark-mode.css">
+    <script src="js/dark-mode.js"></script>
 </head>
 <body id="top">
 <!--[if lt IE 8]>
@@ -91,8 +93,10 @@
             </div>
         </div>
         <div class="countdown-container text-center">
+            <!-- <script src="https://cdn.logwork.com/widget/countdown.js"></script>
+            <a href="https://logwork.com/countdown-565g" class="countdown-timer" data-timezone="America/Los_Angeles" data-textcolor="#ffffff" data-date="2025-03-09 00:36" data-background="#000000" data-digitscolor="#ffffff">Countdown Timer</a> -->
             <script src="https://cdn.logwork.com/widget/countdown.js"></script>
-            <a href="https://logwork.com/countdown-timer" onclick="return false" class="countdown-timer" data-style="columns" data-timezone="America/Los_Angeles" data-date="2025-08-28 18:00"><h3>Countdown to Our Wedding</h3></a>
+            <a href="https://logwork.com/countdown-timer" onclick="return false" class="countdown-timer" id="countdown-timer" data-style="columns" data-timezone="America/Los_Angeles" data-date="2025-08-28 18:00"><h3>Countdown to Our Wedding</h3></a>
         </div>
     </div>
 </section>
@@ -135,7 +139,6 @@
                 <div class="wp3">
                     <p><strong>Ceremony</strong></p>
                     <h5>Stay tuned for updates! <span class="time"></span></h5>
-                    <p></p>
                 </div>
             </div>
             <div class="col-md-6 col-sm-12 col-xs-12 rightcol">
@@ -144,7 +147,6 @@
                     <h5>Check back later! <span class="time">
 <!--                        TBD-->
                     </span></h5>
-                    <p></p>
                 </div>
             </div>
         </div>
@@ -323,7 +325,7 @@
 <section id="map" class="section-padding">
     <div class="text-center">
         <h3>How do I get there?</h3>
-        <p style="font-weight: bold; padding-left: 5%; padding-right: 5%;">
+        <p style="margin-top: 10px; font-weight: bold; margin-left: 3%; margin-right: 3%;">
             The wedding venue is in the Fremont neighborhood, typically a 15-minute drive
             from downtown. However, be sure to allow extra time for Thursday evening traffic.
             If you plan to drive, street parking is available. We recommend using a
@@ -344,13 +346,16 @@
                         <div class="col-md-6">
                             <h5>The Fremont Foundry</h5>
                             <a href="https://maps.app.goo.gl/sGhG27wEnM464X7K6">
-                            <p>154 N 35th St. <br>
-                                Seattle, WA 98103</p>
+                            <p class="contact">
+                                154 N 35th St. 
+                                <br>
+                                Seattle, WA 98103
+                            </p>
                             </a>
                         </div>
                         <div class="col-md-6">
                             <h5>Contact Us!</h5>
-                            <p>
+                            <p class="contact">
                                 <i class="fa fa-mobile"></i> Merrilee <a href="tel://+15176174141">+1 5176174141</a><br>
                                 <i class="fa fa-mobile"></i> Rami <a href="tel://+12062917416">+1 2062917416</a>
                             </p>
@@ -555,13 +560,13 @@
                         Please no gifts! We have everything we could possibly need, and we know travel
                         can be expensive. If you must contribute, please donate to one of the following
                         fundraisers:
-                            <ul style="padding-left:20px">
-                            <li><a href="https://donate.unrwa.org/int/en/gaza">United Nations Relief and Works Agency</a></li>
-                            <li><a href="https://www.pcrf.net/">Palestine Children's Relief Fund</a></li>
-                            <li><a href="https://wck.org/">World Central Kitchen</a></li>
-                            <li><a href="https://www.msf.org/donate">Médecins Sans Frontières</a></li>
-                        </ul>
                     </p>
+                    <ul style="padding-left:20px">
+                        <li><a href="https://donate.unrwa.org/int/en/gaza">United Nations Relief and Works Agency</a></li>
+                        <li><a href="https://www.pcrf.net/">Palestine Children's Relief Fund</a></li>
+                        <li><a href="https://wck.org/">World Central Kitchen</a></li>
+                        <li><a href="https://www.msf.org/donate">Médecins Sans Frontières</a></li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -572,7 +577,7 @@
 <footer>
     <div class="container">
         <div class="row">
-            <div class="col-sm-12 text-center content">
+            <div class="col-sm-12 text-center content" style="background-color: #121212;">
                 <span class="to-top-wrapper"><a href="#top" class="to-top"><i class="fa fa-angle-up"></i></a></span>
                 <span class="fa fa-heart pulse2"></span>
             </div>
