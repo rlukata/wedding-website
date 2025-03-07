@@ -188,6 +188,11 @@ body.dark-mode .content {
     border-color: #444;
 }
 
+
+body.dark-mode .col-sm-12 {
+    background-color: #121212;
+}
+
 body.dark-mode .content h1,
 body.dark-mode .content h2,
 body.dark-mode .content h3,
