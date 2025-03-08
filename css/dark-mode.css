@@ -269,3 +269,7 @@ body.dark-mode #video-content {
 body.dark-mode #video-content h5 {
     color: #f0f0f0;
 }
+
+.dark-mode hr {
+    background-color: #f0f0f0;
+}
