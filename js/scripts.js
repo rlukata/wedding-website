@@ -97,7 +97,7 @@ $(document).ready(() => {
 	/***************** Nav Transformicon ******************/
 
 	/* When user clicks the Icon */
-	$(".nav-toggle").click(function () {
+	$(".nav-toggle").click(function (event) {
 		$(this).toggleClass("active");
 		$(".header-nav").toggleClass("open");
 		event.preventDefault();
@@ -164,6 +164,9 @@ $(document).ready(() => {
 		});
 	});
 
+	/********************** Embed youtube video *********************/
+    $('.player').YTPlayer();
+
 	/********************** Toggle Map Content **********************/
 	$("#btn-show-map").click(() => {
 		$("#map-content").toggleClass("toggle-map-content");
@@ -186,14 +189,14 @@ $(document).ready(() => {
 			title: "Merrilee and Rami's Wedding",
 
 			// Event start date
-			start: new Date("Nov 28, 2025 16:00"),
+			start: new Date("Aug 28, 2025 16:00"),
 
 			// Event duration (IN MINUTES)
 			// duration: 120,
 
 			// You can also choose to set an end time
 			// If an end time is set, this will take precedence over duration
-			end: new Date("Nov 29, 2025 00:00"),
+			end: new Date("Aug 28, 2025 11:59"),
 
 			// Event Address
 			address: "Seattle, WA, USA",
@@ -218,7 +221,7 @@ $(document).ready(() => {
 			),
 		);
 
-		if (MD5($("#invite_code").val()) !== "3b79ecc7e17456f7524eb7f17709dc8b") {
+		if (MD5($("#invite_code").val()) !== "0aface3e62ae854e0fd40b1124ec1e85") {
 			$("#alert-wrapper").html(
 				alert_markup(
 					"danger",
@@ -319,15 +322,18 @@ function MD5(r) {
 /********************** Extras **********************/
 
 // Google map
-function initMap() {
-	const location = { lat: 47.6704754, lng: -122.3200403 };
+async function initMap() {
+	const location = { lat: 47.6518, lng: -122.3553 };
 	const map = new google.maps.Map(document.getElementById("map-canvas"), {
 		zoom: 15,
 		center: location,
-		scrollwheel: false,
+		mapTypeId: google.maps.MapTypeId.ROADMAP,
+		mapId: "DEMO_MAP_ID",
 	});
 
-	new google.maps.Marker({
+	// TODO: Create MapID for wedding site
+	const { AdvancedMarkerElement } = await google.maps.importLibrary("marker");
+	new AdvancedMarkerElement({
 		position: location,
 		map: map,
 	});

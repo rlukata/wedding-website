@@ -1,7 +1,7 @@
 const gulp = require("gulp");
 const sass = require("gulp-sass")(require("sass"));
-// const uglify = require("gulp-uglify");
 const rename = require("gulp-rename");
+const replace = require("gulp-replace");
 const babel = require("gulp-babel");
 
 // compile scss to css
@@ -13,18 +13,25 @@ gulp.task("sass", () =>
 		.pipe(gulp.dest("./css")),
 );
 
+gulp.task("replace", () =>
+	gulp
+		.src("./index.html")
+		.pipe(replace("MAPS_API_KEY", process.env.MAPS_API_KEY))
+		.pipe(gulp.dest(".")),
+);
+
 // watch changes in scss files and run sass task
 gulp.task("sass:watch", () => {
 	gulp.watch("./sass/**/*.scss", ["sass"]);
 });
 
-gulp.task("minify-js", () => {
-	return gulp
+gulp.task("minify-js", () =>
+	gulp
 		.src("./js/scripts.js")
 		.pipe(babel({ presets: ["minify"] }))
 		.pipe(rename({ basename: "scripts.min" }))
-		.pipe(gulp.dest("./js"));
-});
+		.pipe(gulp.dest("./js")),
+);
 
 // default task
-gulp.task("default", gulp.series("sass", "minify-js"));
+gulp.task("default", gulp.series("sass", "replace", "minify-js"));
