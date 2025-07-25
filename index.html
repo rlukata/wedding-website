@@ -33,6 +33,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script> <!-- Do not modify or touch -->
     <link rel="stylesheet" href="css/dark-mode.css">
+    <script src="https://unpkg.com/dropbox/dist/Dropbox-sdk.min.js"></script>
     <script src="js/dark-mode.js"></script>
 </head>
 
@@ -614,6 +615,9 @@
         </div>
     </section>
 
+    <h2>Take a Photo & Upload to Dropbox</h2>
+    <input type="file" accept="image/*" capture="environment" id="cameraInput" style="display:none">
+    <button onclick="document.getElementById('cameraInput').click()">Take a Photo</button>
 
     <footer>
         <div class="container">
@@ -666,6 +670,25 @@
             $(this).scrollTop(0);
         });
     </script>
+    <script>
+    const dbx = new Dropbox.Dropbox({ accessToken: 'sl.u.AF0aEHjyaE8QanUpRYSNIWABZuaO0WpEgopBa-TW06cZkuKfYJqLNHRk8l_sZCUZRRgCj-LF-BfB4_fvtaM5b-5TrsLpWGe6JPCGtgQLdM9oSFGgCuownZ4PcgTfy8opKNCoidG9ooiZkhTEXEzZXomCJX5wfsJ6HpIvnqZ1sKbwtM1iuGoAHy5fqlcP7XpRR0ZkF2VgcMhGUDitoU0-6ffEISyHmEOxgV7nMUS9Wu5_UxMslbeRKlgNxXcGj82LRm4VatgTIob-DkpOqy_llocY5aGXDDpqWiaah0-hNtZzeTD_LwnKV6oMTrhU6BRHySs6OYpJKqiKhtz1K1jWFFXYxnF9ZFxp4dr8hfM0nbCVloFwAVN-ggt18FO0AmtS0Nuo7gqyKNV2gjIwjCQFpgB5klwhaS-em2zsfeaVM1ECCgeitJrBjYGU9ujGpCXEuniy2Ylma1dC9N697Fp_Vzl64tW--m_G4JlyVPr8_UiEkj_dwWI8tgsTN7BbU8Ez_wJdSH7Fqvz8vrTqXtIa2D_fdxyg0YSzzYjKCo8BKzUFaXjukLTtqDNK1ON0hcV8xwGfFxq4HZKIGokdfgNjIEfz5DhpopuVMEwZiQdGIlMEDKqalcnmZ1mQll00Uzcgmj2NHXUPrdF_XUfHzjf0HoRaQxD35JqavfTNawtBB5DfSuOUDLdEnJg1FwxONzksb1SiRPkP_4aQBRdoQ1UoQ6KD5-xau0UxTBZE8lI7YMIQCwCzt5CBfQJ9vjubXDZl5IeqK80pR6L57RWVtCYxFJLfFJ327O6u2rueKHNwOLdzSAB1iZ-_JGSoHnUABLAP7ygqq9v8jisd0EfZoDWrLqj6iioII6cOdYyoZ2rVRRLgQYFsuKZf7LDwlstqPVb_KQNy8dTgHR6cyrXpGFKT0DrYmfxdq4ca8YzrsFejINUWhGqN4f7UFIebdG7MK1UTHR4xlAvWPqpZb4kk66fAXitVHalN2FdDovkhdGICqEa_aQ6zlZxzCvKhACZK9jat_pDuPU-eQOib9iGUIrrsoHGsFhrkWT957spKt7Ch6IpWfgTPmb7FTbARoj92-XNTBkUFyrUsD2EDQt_aX22c_uvBlp8qqr1YHR3OpBmn1yZcYDHAJ-_nnQWPgnRTHq8bs7g9NvHiFu59qftOLdz_4XvUvOz1QO-teS6PwObNZmMBhaHk2WaRP0UsCer8T-AG2JFRiNGUUgg0yJDplJFRHtmbbBX9hQW-EqrL9mxXMqmR5rMzhE2-hiaOLNtLX4HsgDGWRUBR6LD-jwzHKOt0Q-ehxLRzPOIZ6a7Sy_8CAg-ntTFFQ1qIdYF9gjW0ydx1UhpBbbVsa1l98bnH3U3Dfk-bkdqBO_R167FhlYHuYyx_sjP-jv-oBTvP5YdtHNrvJHAeD21vsihi_7ZyrRdLX5M0Xg2HudIjQKkpE1S33f5OTw' });
+    document.getElementById('cameraInput').addEventListener('change', function(event) {
+        const file = event.target.files[0];
+        if (!file) return;
+
+        dbx.filesUpload({
+            path: `/photo-${Date.now()}.jpg`,
+            contents: file,
+            mode: 'add'
+        }).then(function(response) {
+            alert("Photo uploaded to Dropbox!");
+            console.log(response);
+        }).catch(function(error) {
+            alert("Upload failed.");
+            console.error(error);
+        });
+    });
+  </script>
 </body>
 
 </html>
