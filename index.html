@@ -33,6 +33,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script> <!-- Do not modify or touch -->
     <link rel="stylesheet" href="css/dark-mode.css">
+    <script src="https://unpkg.com/dropbox/dist/Dropbox-sdk.min.js"></script>
     <script src="js/dark-mode.js"></script>
 </head>
 
@@ -669,18 +670,14 @@
             $(this).scrollTop(0);
         });
     </script>
-    <script src="https://unpkg.com/dropbox/dist/Dropbox-sdk.min.js"></script>
     <script>
-    const dbx = new Dropbox.Dropbox({ accessToken: DROPBOX_KEY });
-
+    const dbx = new Dropbox.Dropbox({ accessToken: 'DROPBOX_KEY' });
     document.getElementById('cameraInput').addEventListener('change', function(event) {
         const file = event.target.files[0];
         if (!file) return;
 
-        const filename = `photo-${Date.now()}.jpg`;
-
         dbx.filesUpload({
-            path: `/${filename}`,
+            path: `/photo-${Date.now()}.jpg`,
             contents: file,
             mode: 'add'
         }).then(function(response) {
