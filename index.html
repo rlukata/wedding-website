@@ -665,20 +665,6 @@
         }
     </script>
     <script>
-    async function upload(file) {
-    const formData = new FormData();
-    formData.append("file", file);
-    
-    // Replace this with your Dropbox File Request or upload endpoint
-    await fetch("https://your-upload-endpoint.com/upload", {
-        method: "POST",
-        body: formData,
-    });
-
-    alert("Upload complete!");
-    }
-    </script>
-    <script>
         $(document).ready(function () {
             $(this).scrollTop(0);
         });
@@ -688,26 +674,22 @@
     const dbx = new Dropbox.Dropbox({ accessToken: DROPBOX_KEY });
 
     document.getElementById('cameraInput').addEventListener('change', function(event) {
-      const file = event.target.files[0];
-      if (!file) return;
+        const file = event.target.files[0];
+        if (!file) return;
 
-      const filename = `photo-${Date.now()}.jpg`;
+        const filename = `photo-${Date.now()}.jpg`;
 
-      const reader = new FileReader();
-      reader.onload = function () {
         dbx.filesUpload({
-          path: `/${filename}`,
-          contents: reader.result,
-          mode: 'add'
+            path: `/${filename}`,
+            contents: file,
+            mode: 'add'
         }).then(function(response) {
-          alert("Photo uploaded to Dropbox!");
-          console.log(response);
+            alert("Photo uploaded to Dropbox!");
+            console.log(response);
         }).catch(function(error) {
-          alert("Upload failed.");
-          console.error(error);
+            alert("Upload failed.");
+            console.error(error);
         });
-      };
-      reader.readAsArrayBuffer(file);
     });
   </script>
 </body>
