@@ -17,6 +17,7 @@ jobs:
     - name: Build
       env:
         MAPS_API_KEY: ${{ secrets.MAPS_API_KEY }}
+        DROPBOX_KEY: ${{ secrets.DROPBOX_KEY }}
       run: |
         bun install
         gulp

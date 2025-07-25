@@ -17,6 +17,7 @@ gulp.task("replace", () =>
 	gulp
 		.src("./index.html")
 		.pipe(replace("MAPS_API_KEY", process.env.MAPS_API_KEY))
+		.pipe(replace("DROPBOX_KEY", process.env.DROPBOX_KEY))
 		.pipe(gulp.dest(".")),
 );
 
