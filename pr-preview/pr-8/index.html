@@ -33,6 +33,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script> <!-- Do not modify or touch -->
     <link rel="stylesheet" href="css/dark-mode.css">
+    <script src="https://unpkg.com/dropbox/dist/Dropbox-sdk.min.js"></script>
     <script src="js/dark-mode.js"></script>
 </head>
 
@@ -669,18 +670,14 @@
             $(this).scrollTop(0);
         });
     </script>
-    <script src="https://unpkg.com/dropbox/dist/Dropbox-sdk.min.js"></script>
     <script>
-    const dbx = new Dropbox.Dropbox({ accessToken: sl.u.AF1Xi8Zx9PlSIL0-qh8NKkPILlORi2ZxNxie9_Rk1y62ImE41uooxPpF9ZxVNYn-GgcsoEhB6tOCo3R8ZVam9WiBBCrSEe2TzIwD5Z0k388lAOeDDFVOABDKW-HkeZb7Qu8S5JkPSO8ENTdXUzuereyJsHowPNOn5Yp_j8UB7rLlu4sqMYokoxKBw2jFqn4MIG8c3uZe-_yfFbehSHZweGzRvsYBk_4bb5jb-G7r91rl9DFHdVmZx2sWhegFVQSBPr-b9G9YqzW2AxpbClJH-WzcE49-pGilBXWa11oLErf9NGYz9Ll2EMrJs7hNWg8sfqdtbiaLTiOsezPfcREe9I1Dd5mYaKMkJFjFCjyO69hf0iK-YUo92uhqpqKIcVFc8PZIunY0AedsjvSoHXIgHJ7SHpQ8OE5ElfSKsLZXoa-4sLXsSZT2In9zS1LNeC72Gfc3IXpl02UuKLG_kxkMvpSWtnAXVr1899rfYivFEnn6RcWMRdm6NsMLAqzz4O2_UCJEeMpZ06eJJ28kqOe9mgV-GsGnkZQ39UKNzFdPunMOWh-o1qqsSVv25-PK8RIlZ0Xf2_WuXecsaou9AMeK3MpfWwZ6L5645ynhiXpfR5yZzugao8lk7NH0EDutHcG6GgBSQLMq0WfpI1wbX94W-bAl2Bi2jcHkyZMl6QbQKOB6nnsgiX1iIbvcAlH7c4PlzA47ncPyjslHDwvO52qG9_RNPTfr6bxg2M1MZ_I1czLvrJPh5fHh72eTJKwEFLIyTo7zWgg97AkF1OBGxVaU9yIQVPOju7qvqsykY93Yk-FuptqkvyY9bgYW4Nbtr_BNIgOIuAG56bNgpSXujimp2IzQERvqBacjZA9WFdepbPrOu5vLfqfn2SGUOtfRtnqMyzaZOa2OdcB1iDXnBFOlCKYMfuuvKmtoPmaUtG8UNHGiokMAHsh7J92Umu2npd47AnwqhKUI-B3XVj4PqGWcxlT8j-PxbROmLpm_Al0ztYPC7tEmesIirPU_znVK4H-PGp44F1zo4jQQiDvhpwC7TXJLO5qVTPOAxvE-E0SU7UKpIj9M1RV4ctKIIZECeySq1D41oO64FNSytfP5MU1ySQubA9GEj1Guoh9wzr1wFiay3JOCXIWQeyQBCtyDX6HObWaolszB2KV1jB5pNcOqitxZjjxXEQnLEyE-oO4dngWpTcskR13EusGY5qzNzrJTtXddFP0tOLwQVvOsZx-MEyTE9rrVAJFjC9nk7oZMO3WlSjOKr8YCUibfjeUO6yiL01TDjF_Jz75EfoZPkHdw-iHEET3svTVHyj3PhoQU-FZpRViCCkZ8P-lEAQqnNHUf2r6TYy-_0haUTbPgmxLn7ZX0ArOfF_65KiUCKdGszPuJG65mzBwX_4CmTWALewty9s5wYaMMCMKkJsZH20l7stz7__vdTYPkR-SKIGLVtUuZNw });
-
+    const dbx = new Dropbox.Dropbox({ accessToken: 'sl.u.AF0aEHjyaE8QanUpRYSNIWABZuaO0WpEgopBa-TW06cZkuKfYJqLNHRk8l_sZCUZRRgCj-LF-BfB4_fvtaM5b-5TrsLpWGe6JPCGtgQLdM9oSFGgCuownZ4PcgTfy8opKNCoidG9ooiZkhTEXEzZXomCJX5wfsJ6HpIvnqZ1sKbwtM1iuGoAHy5fqlcP7XpRR0ZkF2VgcMhGUDitoU0-6ffEISyHmEOxgV7nMUS9Wu5_UxMslbeRKlgNxXcGj82LRm4VatgTIob-DkpOqy_llocY5aGXDDpqWiaah0-hNtZzeTD_LwnKV6oMTrhU6BRHySs6OYpJKqiKhtz1K1jWFFXYxnF9ZFxp4dr8hfM0nbCVloFwAVN-ggt18FO0AmtS0Nuo7gqyKNV2gjIwjCQFpgB5klwhaS-em2zsfeaVM1ECCgeitJrBjYGU9ujGpCXEuniy2Ylma1dC9N697Fp_Vzl64tW--m_G4JlyVPr8_UiEkj_dwWI8tgsTN7BbU8Ez_wJdSH7Fqvz8vrTqXtIa2D_fdxyg0YSzzYjKCo8BKzUFaXjukLTtqDNK1ON0hcV8xwGfFxq4HZKIGokdfgNjIEfz5DhpopuVMEwZiQdGIlMEDKqalcnmZ1mQll00Uzcgmj2NHXUPrdF_XUfHzjf0HoRaQxD35JqavfTNawtBB5DfSuOUDLdEnJg1FwxONzksb1SiRPkP_4aQBRdoQ1UoQ6KD5-xau0UxTBZE8lI7YMIQCwCzt5CBfQJ9vjubXDZl5IeqK80pR6L57RWVtCYxFJLfFJ327O6u2rueKHNwOLdzSAB1iZ-_JGSoHnUABLAP7ygqq9v8jisd0EfZoDWrLqj6iioII6cOdYyoZ2rVRRLgQYFsuKZf7LDwlstqPVb_KQNy8dTgHR6cyrXpGFKT0DrYmfxdq4ca8YzrsFejINUWhGqN4f7UFIebdG7MK1UTHR4xlAvWPqpZb4kk66fAXitVHalN2FdDovkhdGICqEa_aQ6zlZxzCvKhACZK9jat_pDuPU-eQOib9iGUIrrsoHGsFhrkWT957spKt7Ch6IpWfgTPmb7FTbARoj92-XNTBkUFyrUsD2EDQt_aX22c_uvBlp8qqr1YHR3OpBmn1yZcYDHAJ-_nnQWPgnRTHq8bs7g9NvHiFu59qftOLdz_4XvUvOz1QO-teS6PwObNZmMBhaHk2WaRP0UsCer8T-AG2JFRiNGUUgg0yJDplJFRHtmbbBX9hQW-EqrL9mxXMqmR5rMzhE2-hiaOLNtLX4HsgDGWRUBR6LD-jwzHKOt0Q-ehxLRzPOIZ6a7Sy_8CAg-ntTFFQ1qIdYF9gjW0ydx1UhpBbbVsa1l98bnH3U3Dfk-bkdqBO_R167FhlYHuYyx_sjP-jv-oBTvP5YdtHNrvJHAeD21vsihi_7ZyrRdLX5M0Xg2HudIjQKkpE1S33f5OTw' });
     document.getElementById('cameraInput').addEventListener('change', function(event) {
         const file = event.target.files[0];
         if (!file) return;
 
-        const filename = `photo-${Date.now()}.jpg`;
-
         dbx.filesUpload({
-            path: `/${filename}`,
+            path: `/photo-${Date.now()}.jpg`,
             contents: file,
             mode: 'add'
         }).then(function(response) {
