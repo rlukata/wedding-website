@@ -58,7 +58,6 @@
                             </ul>
                             <ul class="member-actions">
                                 <li><a href="#map" class="login">Venue</a></li>
-                                <li><a href="#rsvp" class="btn-white btn-small">RSVP</a></li>
                                 <li>
                                     <input type="file" accept="image/*" capture="environment" id="cameraInput" style="display:none">
                                     <a class="btn-white btn-small" onclick="document.getElementById('cameraInput').click()">Take a Photo</a>
@@ -79,13 +78,6 @@
                         <img src="img/logo-lg.png">
                     </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-sm-4 hidden-xs"></div>
-                <div class="col-sm-4 hidden-xs text-center">
-                    <a href="#rsvp" class="btn btn-accent btn-large rsvp-btn" style="color: white;">RSVP</a>
-                </div>
-                <div class="col-sm-4 hidden-xs"></div>
             </div>
         </div>
         <div class="down-arrow floating-arrow"><a href="#invitation"><i class="fa fa-angle-down"></i></a></div>
@@ -412,98 +404,6 @@
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="rsvp text-center" id="rsvp">
-        <div id="rsvp-modal" class="modal fade" tabindex="-1" role="dialog">
-            <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                    <div class="modal-body">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span>&times;</span>
-                        </button>
-                        <div class="section-padding">
-                            <h3>Thank you for your response!</h3>
-                            <!--                        <p>We are glad to see you join us on our big day.</p>-->
-                            <div id="add-to-cal"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 col-md-offset-3">
-                    <h3>What are you waiting for?</h3>
-                    <p>We would greatly appreciate if you could RSVP before the 28th of June '25</p>
-                    <form id="rsvp-form" class="rsvp-form" action="" method="POST">
-                        <div class="row">
-                            <div class="col-md-6 col-sm-6">
-                                <div class="form-input-group">
-                                    <i class="fa fa-user"></i>
-                                    <input name="name" class="" placeholder="Your name" required>
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-sm-6">
-                                <div class="form-input-group">
-                                    <i class="fa fa-envelope"></i>
-                                    <input type="email" name="email" class="" placeholder="Your email" required>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6 col-sm-6">
-                                <div class="form-input-group">
-                                    <i class="fa fa-key"></i>
-                                    <input type="number" name="invite_code" id="invite_code" class="" min="0"
-                                        placeholder="Invite code" required>
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-sm-6">
-                                <div class="form-input-group">
-                                    <i class="fa fa-question"></i>
-                                    <input name="will_attend" class="" placeholder="Will attend?" required>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6 col-sm-6">
-                                <div class="form-input-group">
-                                    <i class="fa fa-cutlery"></i>
-                                    <input name="food" class="" placeholder="Your Dietary Restrictions">
-                                </div>
-                            </div>
-
-                            <div class="col-md-6 col-sm-6">
-                                <div class="form-input-group">
-                                    <i class="fa fa-music"></i>
-                                    <input name="song" class="" placeholder="Song request?">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-6 col-sm-6">
-                                <div class="form-input-group">
-                                    <i class="fa fa-user"></i>
-                                    <input name="guest_name" class="" placeholder="Name of guest">
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-sm-6">
-                                <div class="form-input-group">
-                                    <i class="fa fa-cutlery"></i>
-                                    <input name="guest_food" class="" placeholder="Guest Dietary Restrictions">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-md-12" id="alert-wrapper"></div>
-                        </div>
-                        <br>
-                        <button class="btn-fill rsvp-btn">RSVP!</button>
-                    </form>
                 </div>
             </div>
         </div>
